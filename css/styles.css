@@ -70,6 +70,12 @@ button {
     margin: -1px;
 }
 
+/* Стилизация секции */
+.section {
+    padding: 94px 0;
+}
+
+
 /* ХЕДЕР */
 .header {
     border-bottom: 1px solid #ECECEC;
@@ -366,13 +372,13 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 .form__msg {
     display: block;
     width: 100%;
-    height: 40px;
-    padding: 0;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
 
 .form__input {
+    height: 40px;
+
     padding: 0 12px 0 42px;
 }
 
@@ -399,7 +405,6 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 }
 
 .form__msg-area {
-    position: relative;
     margin-bottom: 20px;
 }
 
@@ -465,11 +470,7 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 }
 
 /* ------Преимущества------ */
-.section {
-    padding: 94px 0;
-}
-
-.benefits-thumb {
+.benefits__thumb {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -481,20 +482,20 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     border-radius: 4px;
 }
 
-.benefits-list {
+.benefits__list {
     display: flex;
     flex-wrap: wrap;
 }
 
-.benefits-item {
+.benefits__item {
     flex-basis: calc((100% - 3 * var(--margin-gap)) / 4);
 }
 
-.benefits-item:not(:last-child) {
+.benefits__item:not(:last-child) {
     margin-right: var(--margin-gap);
 }
 
-.benefits-title {
+.benefits__title {
     color: var(--color-black);
 
     font-weight: 700;
@@ -506,7 +507,7 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     margin-bottom: 10px;
 }
 
-.benefits-text {
+.benefits__text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
