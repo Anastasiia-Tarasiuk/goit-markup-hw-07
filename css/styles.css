@@ -288,7 +288,7 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.close {
+.modal__close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -306,11 +306,11 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 
 }
 
-.close:hover {
+.modal__close:hover {
     fill: var(--color-blue);
 }
 
-.modal-text {
+.modal__text {
     color: var(--color-black);
 
     font-weight: 700;
@@ -322,12 +322,12 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     margin-bottom: 12px;
 }
 
-.modal-form {
+.form {
     position: relative;
 }
 
 
-.modal-label {
+.form__label {
     position: relative;
 
     display: block;
@@ -335,21 +335,21 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     margin-bottom: 10px;
 }
 
-.modal-input, 
-.modal-input + svg,
-.modal-msg {
+.form__input, 
+.form__icon,
+.form__msg {
     transition: border-color var(--duration) var(--cubic), fill var(--duration) var(--cubic); 
 }
 
-.modal-input:focus, 
-.modal-input:focus + svg,
-.modal-msg:focus {
+.form__input:focus, 
+.form__input:focus + .form__icon,
+.form__msg:focus {
     outline: none;
     border-color: var(--color-blue);
     fill:var(--color-blue);
 }
 
-.label-text {
+.form__text {
     display: block;
 
     color: var(--color-grey);
@@ -362,8 +362,8 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     margin-bottom: 4px;
 }
 
-.modal-input, 
-.modal-msg {
+.form__input, 
+.form__msg {
     display: block;
     width: 100%;
     height: 40px;
@@ -372,24 +372,24 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     border-radius: 4px;
 }
 
-.modal-input {
+.form__input {
     padding: 0 12px 0 42px;
 }
 
-.form-icon {
+.form__icon {
     position: absolute;
     top: 29px;
     left: 12px;
 }
 
-.modal-msg {
+.form__msg {
     padding: 12px 16px;
     
     height: 120px;
     resize: none;
 }
 
-.modal-msg::placeholder {
+.form__msg::placeholder {
     color: rgba(117, 117, 117, 0.5);
     
     font-weight: 400;
@@ -398,12 +398,12 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     letter-spacing: 0.01em;
 }
 
-.msg-area {
+.form__msg-area {
     position: relative;
     margin-bottom: 20px;
 }
 
-.modal-label:last-of-type {
+.form__label:last-of-type {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -411,11 +411,11 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     padding: 0 12px;
 }
 
-.user-policy {
+.form__user-policy {
     position: absolute;
 }
 
-.checkbox {
+.form__checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -427,24 +427,24 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     border-radius: 2px;
 }
 
-.user-policy:checked + .checkbox {
+.form__user-policy:checked + .form__checkbox {
     border-color: var(--color-blue);
     background-color: var(--color-blue);
 }
 
-.policy-text {
+.form__policy-text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
-.policy-conditions {
+.form__policy-conditions {
     position: relative;
     color: var(--color-blue);
 }
 
-.policy-conditions::after {
+.form__policy-conditions::after {
     content: "";
     position: absolute;
     bottom: 1px;
