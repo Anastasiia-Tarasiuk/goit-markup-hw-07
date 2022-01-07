@@ -62,6 +62,12 @@ button {
     margin: 0 auto;
 }
 
+/* Стилизация секции */
+.section {
+    padding: 94px 0;
+}
+
+/*  Скрытин объектов */
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -70,9 +76,10 @@ button {
     margin: -1px;
 }
 
-/* Стилизация секции */
-.section {
-    padding: 94px 0;
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 
@@ -172,7 +179,7 @@ color: var(--color-blue);
 
 .nav__link, 
 .contacts__link, 
-.address-link {
+.address__link {
     transition: color var(--duration) var(--cubic);
 }
 
@@ -181,8 +188,8 @@ color: var(--color-blue);
 .nav__link:focus,
 .contacts__link:hover,
 .contacts__link:focus,
-.address-link:hover,
-.address-link:focus {
+.address__link:hover,
+.address__link:focus {
     color: var(--color-blue);
 }
 
@@ -268,14 +275,9 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     z-index: 5;
 }
 
-.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
 
 .is-hidden .modal {
-    transform: translate(-50%, -50%)  scale(0.6);
+    transform: translate(-50%, -50%) scale(0.6);
 }
 
 .modal {
@@ -805,18 +807,18 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 /* ПОРТФОЛИО */
 
 /* ------Список фильтров------ */
-.filter-list {
+.filter {
     display: flex;
     justify-content: center;
 
     margin-bottom: 50px;
 }
 
-.filter-item:not(:last-child) {
+.filter__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.filter-button {
+.filter__button {
     background-color: var(--background-color-grey);
     color: var(--color-black);
 
@@ -833,45 +835,45 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     transition: background-color var(--duration) var(--cubic), color var(--duration) var(--cubic), box-shadow var(--duration) var(--cubic);
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter__button:hover,
+.filter__button:focus {
     background-color: var(--color-blue);
     color: var(--color-white);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ------Контент фильтра------ */
-.portfolio-list {
+.portfolio {
     display: flex;
     flex-wrap: wrap;
     margin-right: calc(-1 * var(--margin-gap));
     margin-bottom: calc(-1 * var(--margin-gap));
 }
 
-.portfolio-item {
+.portfolio__item {
     margin-right: var(--margin-gap);
     margin-bottom: var(--margin-gap);
     flex-basis: calc(100% / 3 - var(--margin-gap));
 }
 
-.portfolio-link {
+.project__link {
     display: block;
 
     transition: box-shadow var(--duration) var(--cubic);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
+.project__link:hover,
+.project__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-thumb {
+.project__thumb {
     position: relative;
 
     overflow: hidden;
 }
 
-.img-text {
+.project__description {
     position: absolute;
     left: 0;
     top: 0;
@@ -893,18 +895,18 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     transition: transform var(--duration) var(--cubic);
 }
 
-.portfolio-link:hover .img-text,
-.portfolio-link:focus .img-text {
+.project__link:hover .project__description,
+.project__link:focus .project__description {
     transform: translatey(0);
 
 }
 
-.portfolio-content {
+.project__content {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
 }
 
-.portfolio-title {
+.project__title {
     color: var(--color-black);
 
     font-weight: 700;
@@ -915,7 +917,7 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     margin-bottom: 4px;
 }
 
-.portfolio-text {
+.project__text {
     color: var(--color-grey);
     font-size: 16px;
     line-height: 1.87;
