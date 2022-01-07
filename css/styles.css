@@ -657,24 +657,23 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 .social-media__link:focus {
     background-color: var(--color-blue);
     fill: var(--color-white);
-
 }
 
 /* Постоянные клиенты */
-.clients-list {
+.clients__list {
     display: flex;
 }
 
-.clients-item {
+.clients__item {
     flex-basis: calc((100% - 5 * var(--margin-gap)) / 6);
     height: 92px; 
 }
 
-.clients-item:not(:last-child) {
+.clients__item:not(:last-child) {
     margin-right: var(--margin-gap);
 }
 
-.clients-link {
+.clients__link {
     fill: var(--icon-color);
     border: 1px solid #AFB1B8;
     border-radius: 4px;
@@ -689,8 +688,8 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     transition: border-color var(--duration) var(--cubic), fill var(--duration) var(--cubic);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
     border-color: var(--color-blue);
     fill: var(--color-blue);
 }
