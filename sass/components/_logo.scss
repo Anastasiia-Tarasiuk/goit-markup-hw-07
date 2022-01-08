@@ -1,25 +1,26 @@
 /* Стилизация лого */
 .logo {
     color: var(--color-logo);
-    font-family: Raleway, sans-serif;
+    font-family: $font-family-secondary;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-}
 
-.logo__web {
-    color: var(--color-blue);
+    &__web {
+        color: var(--color-blue);
+    }
+        
+    &--reverse {
+        color: var(--color-white);
+        display: block;
+        margin-bottom: 20px;
+    }
 }
 
 .header__logo {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 25px;
+        margin-right: 93px;
+        padding-top: 24px;
+        padding-bottom: 25px;
 }
-
-.logo--reverse {
-    color: var(--color-white);
-    display: block;
-    margin-bottom: 20px;
-}
+    

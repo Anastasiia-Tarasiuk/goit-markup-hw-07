@@ -1,0 +1,27 @@
+// Заголовки секций страницы Студия
+@mixin section-title {
+    color: var(--color-black);
+
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 50px;
+}
+
+// Анимация
+@mixin transition ($transition, $duration: var(--duration),  $cubic: var(--cubic)) {
+    transition: $transition $duration $cubic;
+}
+
+// Шрифт заглавный
+@mixin uppercase-font {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;    
+}
