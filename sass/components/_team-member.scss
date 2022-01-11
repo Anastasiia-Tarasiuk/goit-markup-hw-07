@@ -1,26 +1,24 @@
 /* Члены команды */
-.member {
-    &__content {
-        padding: var(--margin-gap) 0;
-    }
-    
-    &__name, 
-    &__text {
-        font-size: 16px;
-        line-height: 1.19;
-        letter-spacing: 0.03em;
-        text-align: center;
-    }
-    
-    &__name {
-        color: var(--color-black);
-    
-        font-weight: 500;
-    
-        margin-bottom: 10px;
-    }
-    
-    &__text {
-        margin-bottom: 16px;
-    }
+.member__content {
+    padding: var(--margin-gap) 0;
+}
+
+.member__name, 
+.member__text {
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.member__name {
+    color: var(--color-black);
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.member__text {
+    margin-bottom: 16px;
 }

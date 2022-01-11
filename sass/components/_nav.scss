@@ -1,59 +1,55 @@
 /* Стилизация навигации*/
 .nav {
-
-    &__list {
-        display: flex;
-    }
-
-    &__item {
-        position: relative;
-    }
-
-    &__link {
-        display: block;
-        color: var(--color-black);
-
-        &--current {
-            color: var(--color-blue);
-        }
-
-        &--current::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-            
-            width: 100%;
-            height: 4px;
-            background-color: var(--color-blue);
-            border-radius: 2px;
-        }
-    } 
+    display: flex;
 }
+
+.nav__item {
+    position: relative;
+}
+
+.nav__link {
+    display: block;
+    color: var(--color-black);
+
+    &--current {
+        color: var(--color-blue);
+    }
+
+    &--current::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        
+        width: 100%;
+        height: 4px;
+        background-color: var(--color-blue);
+        border-radius: 2px;
+    }
+} 
 
 .contacts {
     margin-left: auto;
     display: flex;
+}
 
-    &__link {
-        color: var(--color-grey);
-        display: flex;
-        align-items: center;
-    }
+.contacts__link {
+    color: var(--color-grey);
+    display: flex;
+    align-items: center;
+}
 
-    &__icon {
-        margin-right: 10px;
-        fill: var(--color-grey);
+.contacts__icon {
+    margin-right: 10px;
+    fill: var(--color-grey);
 
-        // transition: fill var(--duration) var(--cubic);
-        @include transition (fill);
+    // transition: fill var(--duration) var(--cubic);
+    @include transition (fill);
+}
 
-    }
-   
-    &__link:hover &__icon,
-    &__link:focus &__icon {
-        fill: var(--color-blue);
-    }
+.contacts__link:hover .contacts__icon,
+.contacts__link:focus .contacts__icon {
+    fill: var(--color-blue);
 }
 
 

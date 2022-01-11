@@ -54,6 +54,15 @@ img {
   max-width: 100%;
 }
 
+/*  Скрытие объектов */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 /* Стилизация контейнера */
 .conteiner {
   width: 1200px;
@@ -66,19 +75,28 @@ img {
   padding: 94px 0;
 }
 
-/*  Скрытие объектов */
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.section--paddingbottom {
+  padding-bottom: 0;
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+.section__title {
+  color: var(--color-black);
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.benefits__title, .work__text, .join-us__title,
+.sign-up__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* хедер */
@@ -96,7 +114,7 @@ img {
 }
 
 /* Стилизация навигации*/
-.nav__list {
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,14 +207,14 @@ img {
   letter-spacing: 0.03em;
 }
 
-.logo__web {
-  color: var(--color-blue);
-}
-
 .logo--reverse {
   color: var(--color-white);
   display: block;
   margin-bottom: 20px;
+}
+
+.logo__web {
+  color: var(--color-blue);
 }
 
 .header__logo {
@@ -218,7 +236,7 @@ img {
   margin: 0 auto;
 }
 
-.hero__conteiner {
+.hero .hero__conteiner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,7 +249,7 @@ img {
           align-items: center;
 }
 
-.hero__title {
+.hero .hero__title {
   color: var(--color-white);
   font-weight: 900;
   font-size: 44px;
@@ -365,6 +383,12 @@ img {
   z-index: 5;
 }
 
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -424,13 +448,16 @@ img {
   padding: 0 12px;
 }
 
-.form__input, .form__icon, .form__msg {
+.form__input,
+.form__icon,
+.form__msg {
   -webkit-transition: border-color var(--duration) var(--cubic), fill var(--duration) var(--cubic);
   transition: border-color var(--duration) var(--cubic), fill var(--duration) var(--cubic);
 }
 
 .form__input:focus,
-.form__input:focus + .form__icon, .form__msg:focus {
+.form__input:focus + .form__icon,
+.form__msg:focus {
   outline: none;
   border-color: var(--color-blue);
   fill: var(--color-blue);
@@ -446,7 +473,8 @@ img {
   margin-bottom: 4px;
 }
 
-.form__input, .form__msg {
+.form__input,
+.form__msg {
   display: block;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -557,6 +585,14 @@ img {
 }
 
 /* Преимущества */
+.benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .benefits__thumb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,14 +610,6 @@ img {
   border-radius: 4px;
 }
 
-.benefits__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .benefits__item {
   -ms-flex-preferred-size: calc((100% - 3 * var(--margin-gap)) / 4);
       flex-basis: calc((100% - 3 * var(--margin-gap)) / 4);
@@ -593,11 +621,6 @@ img {
 
 .benefits__title {
   color: var(--color-black);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
@@ -607,33 +630,8 @@ img {
   letter-spacing: 0.03em;
 }
 
-.benefits.section {
-  padding-bottom: 0;
-}
-
 /* Чем мы занимаемся */
-.work__conteiner {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.work__title {
-  color: var(--color-black);
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-
-.work__list {
+.work {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -662,11 +660,6 @@ img {
   bottom: 0;
   color: var(--color-white);
   background: rgba(47, 48, 58, 0.8);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   width: 100%;
   height: 70px;
   display: -webkit-box;
@@ -683,20 +676,6 @@ img {
 /* Наша команда */
 .team {
   background-color: var(--background-color-grey);
-}
-
-.team__title {
-  color: var(--color-black);
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-
-.team__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,7 +701,8 @@ img {
   padding: var(--margin-gap) 0;
 }
 
-.member__name, .member__text {
+.member__name,
+.member__text {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -789,18 +769,7 @@ img {
 }
 
 /* Постоянные клиенты */
-.clients__title {
-  color: var(--color-black);
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-
-.clients__list {
+.clients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,7 +842,7 @@ img {
       flex-basis: calc(100% / 3 - var(--margin-gap));
 }
 
-.project__link {
+.project {
   display: block;
   -webkit-transition: -webkit-box-shadow var(--duration) var(--cubic);
   transition: -webkit-box-shadow var(--duration) var(--cubic);
@@ -881,7 +850,7 @@ img {
   transition: box-shadow var(--duration) var(--cubic), -webkit-box-shadow var(--duration) var(--cubic);
 }
 
-.project__link:hover, .project__link:focus {
+.project:hover, .project:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -912,8 +881,8 @@ img {
   transition: transform var(--duration) var(--cubic), -webkit-transform var(--duration) var(--cubic);
 }
 
-.project__link:hover .project__description,
-.project__link:focus .project__description {
+.project:hover .project__description,
+.project:focus .project__description {
   -webkit-transform: translatey(0);
           transform: translatey(0);
 }
@@ -1019,11 +988,6 @@ img {
 .join-us__title,
 .sign-up__title {
   color: var(--color-white);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   margin-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */

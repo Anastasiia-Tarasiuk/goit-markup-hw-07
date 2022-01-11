@@ -4,10 +4,9 @@
     justify-content: center;
 
     margin-bottom: 50px;
-
-    &__item:not(:last-child) {
-        margin-right: 8px;
-    }
 }
 
+.filter__item:not(:last-child) {
+    margin-right: 8px;
+}
 

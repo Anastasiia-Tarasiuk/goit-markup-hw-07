@@ -3,7 +3,10 @@
 // Базовые
 @import './base/reset';
 @import './base/global';
-@import './base/mixin';
+@import './components/conteiner';
+@import './components/section';
+@import './utils/mixin';
+@import './utils/placeholder';
 // Компоненты
 @import './components/header';
 @import './components/nav';
